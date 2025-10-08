@@ -86,24 +86,24 @@ Saídas principais:
 
 ```mermaid
 graph TD
-  A[Inputs: CSVs de folds por arquitetura<br/>inputs/summary_results/] --> B[Etapa 1 (SA): Mesclar 10 folds por arquitetura]
+  A[Inputs: CSVs de folds por arquitetura (inputs/summary_results/)] --> B[Etapa 1 (SA): Mesclar 10 folds por arquitetura]
   B --> C1[SA: Hard Voting (TILE)]
   B --> C2[SA: Soft Voting (TILE)]
   C2 --> D1[SA: Curvas ROC (TILE)]
-  B --> E1[SA: Agregação por IMAGEM]
-  E1 --> F1[SA: Métricas por IMAGEM]
-  B --> E2[SA: Agregação por PACIENTE]
-  E2 --> F2[SA: Métricas por PACIENTE]
+  B --> E1[SA: Agregacao por IMAGEM]
+  E1 --> F1[SA: Metricas por IMAGEM]
+  B --> E2[SA: Agregacao por PACIENTE]
+  E2 --> F2[SA: Metricas por PACIENTE]
   B --> G[Salvar CSVs: merged_table_mob.csv, gg.csv, sh.csv, eff2.csv]
 
   A --> H[Etapa 2 (MA): Mesclar 30 folds de 3 arquiteturas]
   H --> I1[MA: Hard Voting (TILE)]
   H --> I2[MA: Soft Voting (TILE)]
   I2 --> J[MA: Curvas ROC (TILE)]
-  H --> K1[MA: Agregação por IMAGEM]
-  K1 --> L1[MA: Métricas por IMAGEM]
-  H --> K2[MA: Agregação por PACIENTE]
-  K2 --> L2[MA: Métricas por PACIENTE]
+  H --> K1[MA: Agregacao por IMAGEM]
+  K1 --> L1[MA: Metricas por IMAGEM]
+  H --> K2[MA: Agregacao por PACIENTE]
+  K2 --> L2[MA: Metricas por PACIENTE]
   H --> M[Salvar CSV: merged_table_mob_shu_gg.csv]
 ```
 
